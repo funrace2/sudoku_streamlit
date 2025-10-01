@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+streamlit-autorefresh
+random
+json
+time
+datetime
