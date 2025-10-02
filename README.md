@@ -3,6 +3,7 @@ Anaconda 환경에서 Python과 Streamlit을 활용하여 개발한 동적인 �
 
 # 🚀 라이브 데모 (Live Demo)
 아래 링크를 통해 배포된 앱을 직접 플레이해볼 수 있습니다.
+
 🔗 배포 링크: https://sudokuapp-spulybxwmfjv4ghwyx9qwy.streamlit.app
 
 # 🎯 주요 기능 (Key Features)
@@ -15,7 +16,7 @@ Anaconda 환경에서 Python과 Streamlit을 활용하여 개발한 동적인 �
  - Python (from Anaconda Distribution)
  - Streamlit
  - Pandas
- -  NumPy
+ - NumPy
 
 # ⚙️ 시작하기 (Getting Started)
 이 프로젝트는 Anaconda 환경에 최적화되어 있습니다.
@@ -51,6 +52,7 @@ streamlit run app.py
 ```
 
 # 📁 파일 구조 (File Structure)
+
 .
 ├── app.py              # 메인 Streamlit 애플리케이션 코드
 ├── requirements.txt      # 프로젝트 실행에 필요한 라이브러리 목록
