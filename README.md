@@ -33,21 +33,21 @@ cd sudoku_streamlit
 
 2. Conda 가상 환경을 생성하고 활성화합니다.
 
-```python
+```bash
 conda create -n sudoku-env python=3.9
 conda activate sudoku-env
 ```
 
 3. requirements.txt 파일의 라이브러리를 설치합니다.
 
-```python
+```bash
 pip install -r requirements.txt
 ```
 
 # ▶️ 실행 방법 (Usage)
 터미널에 아래 명령어를 입력하여 스도쿠 게임을 실행합니다.
 
-```python
+```bash
 streamlit run app.py
 ```
 
