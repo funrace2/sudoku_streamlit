@@ -13,10 +13,10 @@ Anaconda 환경에서 Python과 Streamlit을 활용하여 개발한 동적인 �
  - 스코어 랭킹 시스템: 게임 완료 시 이름과 시간을 ranking.json 파일에 기록하고, 순위를 사이드바에 표시합니다.
 
 # 🛠️ 기술 스택 (Tech Stack)
- - Python (from Anaconda Distribution)
- - Streamlit
- - Pandas
- - NumPy
+ - ```Python``` (from Anaconda Distribution)
+ - ```Streamlit```
+ - ```Pandas```
+ - ```NumPy```
 
 # ⚙️ 시작하기 (Getting Started)
 이 프로젝트는 Anaconda 환경에 최적화되어 있습니다.
@@ -52,9 +52,11 @@ streamlit run app.py
 ```
 
 # 📁 파일 구조 (File Structure)
+
+```
 .
 ├── app.py              # 메인 Streamlit 애플리케이션 코드
 ├── requirements.txt      # 프로젝트 실행에 필요한 라이브러리 목록
 └── ranking.json        # 사용자 랭킹이 저장되는 파일 (앱 실행 후 자동 생성)
-
+```
 
