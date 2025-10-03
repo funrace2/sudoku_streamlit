@@ -65,9 +65,7 @@ def load_scores():
 
 st.markdown("""
     <style>
-    /* 제목 중앙 정렬 */
     h1 { text-align: center; }
-    /* 입력 필드를 스도쿠 칸처럼 보이게 스타일링 */
     .stTextInput input {
         text-align: center;
         font-size: 20px;
@@ -86,7 +84,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# --- 세션 상태(Session State) 초기화 ---
 if 'game_started' not in st.session_state:
     st.session_state.game_started = False
     st.session_state.puzzle_board = None
@@ -94,7 +91,6 @@ if 'game_started' not in st.session_state:
     st.session_state.start_time = None
     st.session_state.game_over = False
 
-# --- UI 레이아웃 ---
 st.title("🔢 스도쿠")
 st.write("---")
 
@@ -126,15 +122,13 @@ with st.sidebar:
     else:
         st.info("아직 기록이 없습니다. 첫 번째 주인공이 되어보세요!")
 
-# --- 메인 게임 영역 ---
 if not st.session_state.game_started:
     st.info("사이드바에서 '새 게임 시작' 버튼을 눌러주세요!")
 else:
-    main_cols = st.columns([2, 1]) # 보드와 컨트롤 영역 분리
+    main_cols = st.columns([2, 1])
     
     with main_cols[0]:
         st.header("스도쿠 보드")
-        # 모든 입력 위젯을 form으로 묶어, 키 입력마다 앱이 재실행되는 것을 방지
         with st.form(key='sudoku_form'):
             user_board = st.session_state.puzzle_board.copy()
             
@@ -146,7 +140,7 @@ else:
                     key = f"cell_{r}_{c}"
                     
                     if cell_val != 0:
-                        # 미리 채워진 숫자 (수정 불가)
+                        # 미리 채워진 숫자
                         cols[c].text_input(key, value=str(cell_val), disabled=True, label_visibility="collapsed")
                     else:
                         # 사용자 입력 칸
@@ -162,7 +156,6 @@ else:
                 if r == 2 or r == 5:
                         st.markdown("<div style='margin-top: 5px; margin-bottom: 5px; border-top: 2px solid #999;'></div>", unsafe_allow_html=True)
             st.session_state.user_board = user_board
-            # form 내부에 '정답 확인' 버튼 배치
             submit_button = st.form_submit_button(label='정답 확인')
 
     with main_cols[1]:
@@ -188,7 +181,7 @@ else:
                     else:
                         st.warning("이름을 입력해주세요.")
     
-    # --- 정답 확인 로직 (form 제출 후 실행) ---
+    # 정답 확인 로직
     if submit_button:
         if np.array_equal(user_board, st.session_state.solution_board):
             st.balloons()
