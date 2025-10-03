@@ -23,6 +23,7 @@ Anaconda 환경에서 Python과 Streamlit을 활용하여 개발한 동적인 �
 
 ## 필수 요구사항
  - Anaconda Distribution (Python 3.8 이상 포함)
+
 ## 설치 방법
 1. GitHub 저장소를 복제합니다.
 
@@ -48,14 +49,14 @@ pip install -r requirements.txt
 터미널에 아래 명령어를 입력하여 스도쿠 게임을 실행합니다.
 
 ```bash
-streamlit run app.py
+streamlit run Sudoku_Streamlit.py
 ```
 
 # 📁 파일 구조 (File Structure)
 
 ```
 .
-├── app.py              # 메인 Streamlit 애플리케이션 코드
+├── Sudoku_Streamlit.py              # 메인 Streamlit 애플리케이션 코드
 ├── requirements.txt      # 프로젝트 실행에 필요한 라이브러리 목록
 └── ranking.json        # 사용자 랭킹이 저장되는 파일 (앱 실행 후 자동 생성)
 ```
